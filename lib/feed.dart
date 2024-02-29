@@ -12,6 +12,9 @@ class Feed extends StatefulWidget {
 
 class _FeedState extends State<Feed> {
   int Index=1;
+  Color button1 = Color(0xFFFF9F00);
+  Color button2 = Colors.white;
+  Color button3 = Color(0xFFFF9F00);
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -51,50 +54,48 @@ class _FeedState extends State<Feed> {
             ),
           ),
         ],
-        bottom: PreferredSize(
-          preferredSize: Size.fromHeight(50.0),
-          child: Padding(
-            padding: EdgeInsets.all(8.0),
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: 'Enter your text...',
-                border: OutlineInputBorder(),
-              ),
-            ),
-          ),
-        ),
       ),
       body: Column(
       children: [
-
-
       ],
     ),
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.white,
-        color: Colors.grey,
+        color: Color(0xFFF7F7F7),
         buttonBackgroundColor: Color(0xFFF8B23F),
         index: Index,
         animationDuration: Durations.medium1,
+        onTap: (Index){
+          setState(() {
+            button1 = Color(0xFFFF9F00);
+            button2 = Color(0xFFFF9F00);
+            button3 = Color(0xFFFF9F00);
+            if(Index == 0){
+              button1 = Colors.white;
+            }
+            else if(Index == 2){
+              button3 = Colors.white;
+            }
+            else{
+              button2 = Colors.white;
+            }
+          });
+        },
         items: [
           CurvedNavigationBarItem(
             child: Icon(Icons.home_outlined,
             size: 30,
-            color: Colors.white),
-            label: 'Home',
+            color: button1),
           ),
           CurvedNavigationBarItem(
             child: Icon(Icons.add,
                 size: 38,
-            color: Colors.white,),
-            label: 'Upload',
+            color: button2),
           ),
           CurvedNavigationBarItem(
             child: Icon(Icons.chat,
-                size: 30,color: Colors.white,),
-            label: 'Chats',
+                size: 30,color: button3),
           ),
-
         ],
       ),
     );
