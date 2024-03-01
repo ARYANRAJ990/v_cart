@@ -1,6 +1,7 @@
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:v_cart/drwaerNavbar.dart';
 class Feed extends StatefulWidget {
@@ -15,6 +16,21 @@ class _FeedState extends State<Feed> {
   Color button1 = Color(0xFFFF9F00);
   Color button2 = Colors.white;
   Color button3 = Color(0xFFFF9F00);
+  List<String> cat=[
+    "All",
+    "Biscuits",
+    "Noodles",
+    "Drinks",
+    "Namkeen"
+  ];
+  Widget buildBody(BuildContext ctxt, int index){
+    return new Container(
+      child: Center(child: Text(cat[index],style: TextStyle(color: Colors.black, fontSize: 14,fontWeight: FontWeight.normal),)),
+      margin: EdgeInsets.symmetric(horizontal: 8),
+      width: 85,
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: Color(0xFFFCEEC7)),
+    );
+  }
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -44,12 +60,12 @@ class _FeedState extends State<Feed> {
           Container(
             margin: EdgeInsets.only(right: 20.0),
             decoration: BoxDecoration(
-              color: Colors.amberAccent[100],
+              color: Color(0xFFFCEEC7),
               shape: BoxShape.circle,
             ),
             child: IconButton(
               onPressed: () {},
-              icon: Icon(Icons.notifications),
+              icon: Icon(Icons.notifications_none_rounded,size: 30,),
               color: Color(0xFFF8B23F),
             ),
           ),
@@ -63,7 +79,7 @@ class _FeedState extends State<Feed> {
             child: Center(
               child: SizedBox(
                 height: 45,
-                width: 300,
+                width: MediaQuery.of(context).size.width-15,
                 child: TextField(
                   keyboardType: TextInputType.text,
                   style: TextStyle(color: Colors.black,
@@ -88,21 +104,19 @@ class _FeedState extends State<Feed> {
               ),
             ),
           ),
+          SizedBox(
+            height: 10,
+          ),
           Container(
-            height: 35,
+            height: 37,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: 10,
-              itemBuilder: (context, count){
-                return Container(
-                  margin: EdgeInsets.symmetric(horizontal: 10),
-                  width: 75,
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: Colors.yellow),
-                );
-              },
+              itemCount: cat.length,
+              itemBuilder: (BuildContext context, int count)=>buildBody(context, count),
             ),
           ),
         ],
+
             ),
       ),
       bottomNavigationBar: CurvedNavigationBar(
@@ -129,8 +143,8 @@ class _FeedState extends State<Feed> {
         },
         items: [
           CurvedNavigationBarItem(
-            child: Icon(Icons.home_outlined,
-            size: 30,
+            child: Icon(Icons.home_rounded,
+            size: 32,
             color: button1),
           ),
           CurvedNavigationBarItem(
@@ -139,7 +153,7 @@ class _FeedState extends State<Feed> {
             color: button2),
           ),
           CurvedNavigationBarItem(
-            child: Icon(Icons.chat,
+            child: Icon(Icons.chat_rounded,
                 size: 30,color: button3),
           ),
         ],
