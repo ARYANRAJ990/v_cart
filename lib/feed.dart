@@ -88,7 +88,20 @@ class _FeedState extends State<Feed> {
               ),
             ),
           ),
-          
+          Container(
+            height: 35,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: 10,
+              itemBuilder: (context, count){
+                return Container(
+                  margin: EdgeInsets.symmetric(horizontal: 10),
+                  width: 75,
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: Colors.yellow),
+                );
+              },
+            ),
+          ),
         ],
             ),
       ),
