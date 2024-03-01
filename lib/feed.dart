@@ -22,7 +22,7 @@ class _FeedState extends State<Feed> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: Padding(
-          padding:  EdgeInsets.only(left: 11.0),
+          padding:  EdgeInsets.only(left: 18.0),
           child: Container(
             width: 70,
             height: 70,
@@ -42,7 +42,7 @@ class _FeedState extends State<Feed> {
         ),
         actions: [
           Container(
-            margin: EdgeInsets.only(right: 10.0),
+            margin: EdgeInsets.only(right: 20.0),
             decoration: BoxDecoration(
               color: Colors.amberAccent[100],
               shape: BoxShape.circle,
@@ -57,6 +57,37 @@ class _FeedState extends State<Feed> {
       ),
       body: Column(
       children: [
+        Padding(
+          padding:  EdgeInsets.only(top: 10.0),
+          child: Center(
+            child: SizedBox(
+              height: 45,
+              width: 300,
+              child: TextField(
+                keyboardType: TextInputType.text,
+                style: TextStyle(color: Colors.black,
+                fontSize: 16,
+                fontWeight: FontWeight.normal),
+                decoration: InputDecoration(
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Color(0xFFFF9F00)),
+                    borderRadius: BorderRadius.circular(37)
+                  ),
+                  prefixIcon: Icon(Icons.search),
+                  prefixIconColor:Color(0xFFABABAB) ,
+                  hintText: 'Search',
+                  hintStyle: TextStyle(color: Color(0xFFABABAB),fontSize: 16,
+                  fontWeight: FontWeight.normal),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(37),
+                    borderSide: BorderSide(color: Color(0xFFF7F7F7)),
+
+                  )
+                ),
+              ),
+            ),
+          ),
+        )
       ],
     ),
       bottomNavigationBar: CurvedNavigationBar(
