@@ -1,7 +1,6 @@
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 import 'package:v_cart/Proucts/MyProducts.dart';
@@ -164,23 +163,35 @@ class _FeedState extends State<Feed> {
               ),
             ),
           ),
-          GridView.builder(gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              childAspectRatio: (100/140),
-            crossAxisSpacing: 12,
-            mainAxisSpacing: 12,
-          ),
-              scrollDirection: Axis.vertical,
-              itemCount: myProduct().noodles.length,
-            itemBuilder: (context, index) {
-              // Assuming myProduct().noodles is a list of products
-              var noodles = myProduct().noodles;
-              // Assuming Product is the type of items in myProduct().noodles
-              var allproduct = noodles[index];
-              return ProductCard(product: allproduct);
+         Container(
+           width: MediaQuery.of(context).size.width,
+           height: MediaQuery.of(context).size.height,
+           decoration: BoxDecoration(
+               borderRadius: BorderRadius.circular(9),
+               color: Colors.grey.withOpacity((0.1))
+           ),
+           child: GridView.builder(gridDelegate:  const SliverGridDelegateWithFixedCrossAxisCount(
+               crossAxisCount: 2,
+               childAspectRatio: (100/140),
+             crossAxisSpacing: 12,
+             mainAxisSpacing: 12,
+           ),
+               scrollDirection: Axis.vertical,
+               itemCount: myProduct().noodles.length,
+             itemBuilder: (context, index) {
+             return Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: Colors.blue.shade50,
+                //image: DecorationImage(
+                //  image: AssetImage("$myProduct")
+               // )
+              ),
+             );
 
-            },
-          )
+             },
+           ),
+         )
         ],
             ),
       ),
