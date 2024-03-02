@@ -3,6 +3,10 @@ import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
+import 'package:pinput/pinput.dart';
+import 'package:v_cart/Proucts/MyProducts.dart';
+import 'package:v_cart/Proucts/procard.dart';
+import 'package:v_cart/Proucts/product.dart';
 import 'package:v_cart/drwaerNavbar.dart';
 class Feed extends StatefulWidget {
 
@@ -12,6 +16,7 @@ class Feed extends StatefulWidget {
 }
 
 class _FeedState extends State<Feed> {
+  int index=0;
   String SelectedBlock= "Boys Block 1";
   List<String> filter=[
     "Boys Block 1",
@@ -84,6 +89,7 @@ class _FeedState extends State<Feed> {
       ),
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
             padding:  EdgeInsets.only(top: 10.0),
@@ -126,32 +132,55 @@ class _FeedState extends State<Feed> {
               itemBuilder: (BuildContext context, int count)=>buildBody(context, count),
             ),
           ),
-          Container(
-            padding: EdgeInsets.only(right: 50),
-            decoration: BoxDecoration(
-              color: Color(0xFFF7F7F7),
-              shape: BoxShape.rectangle,
-            ),
-            child: DropdownButton(
-              value: SelectedBlock,
-              icon: const Icon(Icons.keyboard_arrow_down,
-              color: Colors.black),
-              borderRadius: BorderRadius.circular(7),
-              iconEnabledColor: Color(0xFFF7F7F7),
-              dropdownColor:Color(0xFFF7F7F7),
-              items: filter.map((String filter) {
-                return DropdownMenuItem(
-                  value: filter,
-                  child: Text(filter,style: TextStyle(color: Color(0xFF343434),fontSize: 18,fontWeight: FontWeight.normal),),
-                );
-              }).toList(),
-              onChanged: (String? newValue) {
-                setState(() {
-                  SelectedBlock = newValue!;
-                });
-              },
+          SizedBox(height: 12),
+          Padding(
+            padding:  EdgeInsets.only(left: 15.0),
+            child: Container(
+              height: 36,
+              decoration: BoxDecoration(
+                color: Color(0xFFF7F7F7),
+                shape: BoxShape.rectangle,
+                borderRadius:   BorderRadius.circular(7),
+              ),
+              margin: EdgeInsets.symmetric(horizontal: 2),
+              child: DropdownButton(
+                value: SelectedBlock,
+                icon: const Icon(Icons.keyboard_arrow_down,
+                color: Colors.black),
+                borderRadius: BorderRadius.circular(7),
+                dropdownColor:Color(0xFFF7F7F7),
+                  underline: Container(),
+                items: filter.map((String filter) {
+                  return DropdownMenuItem(
+                    value: filter,
+                    child: Text(filter,style: TextStyle(color: Color(0xFF343434),fontSize: 16,fontWeight: FontWeight.normal),),
+                  );
+                }).toList(),
+                onChanged: (String? newValue) {
+                  setState(() {
+                    SelectedBlock = newValue!;
+                  });
+                },
+              ),
             ),
           ),
+          GridView.builder(gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              childAspectRatio: (100/140),
+            crossAxisSpacing: 12,
+            mainAxisSpacing: 12,
+          ),
+              scrollDirection: Axis.vertical,
+              itemCount: myProduct().noodles.length,
+            itemBuilder: (context, index) {
+              // Assuming myProduct().noodles is a list of products
+              var noodles = myProduct().noodles;
+              // Assuming Product is the type of items in myProduct().noodles
+              var allproduct = noodles[index];
+              return ProductCard(product: allproduct);
+
+            },
+          )
         ],
             ),
       ),
@@ -177,6 +206,7 @@ class _FeedState extends State<Feed> {
             }
           });
         },
+
         items: [
           CurvedNavigationBarItem(
             child: Icon(Icons.home_rounded,
