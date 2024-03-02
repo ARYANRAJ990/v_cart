@@ -12,6 +12,17 @@ class Feed extends StatefulWidget {
 }
 
 class _FeedState extends State<Feed> {
+  String SelectedBlock= "Boys Block 1";
+  List<String> filter=[
+    "Boys Block 1",
+    "Boys Block 2",
+    "Boys Block 3",
+    "Boys Block 4",
+    "Boys Block 5",
+    "Boys Block 6",
+    "Girls Block 1",
+    "Girls Blolck 2",
+  ];
   int Index=1;
   Color button1 = Color(0xFFFF9F00);
   Color button2 = Colors.white;
@@ -115,8 +126,33 @@ class _FeedState extends State<Feed> {
               itemBuilder: (BuildContext context, int count)=>buildBody(context, count),
             ),
           ),
+          Container(
+            padding: EdgeInsets.only(right: 50),
+            decoration: BoxDecoration(
+              color: Color(0xFFF7F7F7),
+              shape: BoxShape.rectangle,
+            ),
+            child: DropdownButton(
+              value: SelectedBlock,
+              icon: const Icon(Icons.keyboard_arrow_down,
+              color: Colors.black),
+              borderRadius: BorderRadius.circular(7),
+              iconEnabledColor: Color(0xFFF7F7F7),
+              dropdownColor:Color(0xFFF7F7F7),
+              items: filter.map((String filter) {
+                return DropdownMenuItem(
+                  value: filter,
+                  child: Text(filter,style: TextStyle(color: Color(0xFF343434),fontSize: 18,fontWeight: FontWeight.normal),),
+                );
+              }).toList(),
+              onChanged: (String? newValue) {
+                setState(() {
+                  SelectedBlock = newValue!;
+                });
+              },
+            ),
+          ),
         ],
-
             ),
       ),
       bottomNavigationBar: CurvedNavigationBar(

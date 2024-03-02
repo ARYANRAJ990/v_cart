@@ -76,7 +76,7 @@ class _createAccountState extends State<createAccount> {
             Center(
               child: Countdown(
                 seconds: 60,
-                interval: const Duration(milliseconds: 100),
+                interval:  Duration(milliseconds: 100),
                 onFinished: () {
                   print('Timer is done!');
                 },
@@ -84,7 +84,7 @@ class _createAccountState extends State<createAccount> {
                   // Create a Text widget with the desired style
                   return Text(
                     time.toString(),
-                    style: const TextStyle(color: Colors.black, fontSize: 20.67,
+                    style: TextStyle(color: Colors.black, fontSize: 20.67,
                         fontWeight: FontWeight.normal),
                   );
                 },
