@@ -57,7 +57,7 @@ class NavBar extends StatelessWidget {
             title: const Text('Contact Us'),
             onTap: () {},
           ),
-          const Divider(),
+          Divider(),
           ListTile(
             title: const Text('Logout'),
             leading: const Icon(Icons.logout),

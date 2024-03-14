@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 import 'package:timer_count_down/timer_count_down.dart';
-import 'dart:core';
 
 class Verify extends StatefulWidget {
-  const Verify({super.key});
+  const Verify({Key? key});
 
   @override
   State<Verify> createState() => _VerifyState();
@@ -19,31 +18,31 @@ class _VerifyState extends State<Verify> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Padding(
-              padding: EdgeInsets.only(top: 80, left: 30),
+            Padding(
+              padding: const EdgeInsets.only(top: 80, left: 30),
               child: Text(
                 'Verification',
                 style: TextStyle(
-                  color: Colors.black,
+                  color: Colors.blue,
                   fontWeight: FontWeight.bold,
                   fontSize: 36,
                 ),
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: 30.0),
+            Padding(
+              padding: const EdgeInsets.only(left: 30.0),
               child: Text(
                 'Code',
                 style: TextStyle(
                   fontSize: 36,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFFF8B23F),
+                  color: Colors.black,
                 ),
               ),
             ),
-            const SizedBox(height: 35),
-            const Padding(
-              padding: EdgeInsets.only(left: 35.0, right: 35),
+            SizedBox(height: 35),
+            Padding(
+              padding: const EdgeInsets.only(left: 35.0, right: 35),
               child: Text(
                 'We’ve sent the verification code to the raj*****@gmail.com. Enter your code here',
                 style: TextStyle(
@@ -53,7 +52,7 @@ class _VerifyState extends State<Verify> {
                 ),
               ),
             ),
-            const SizedBox(height: 45),
+            SizedBox(height: 45),
             Padding(
               padding: const EdgeInsets.only(left: 15, right: 15.0),
               child: Pinput(
@@ -72,42 +71,65 @@ class _VerifyState extends State<Verify> {
                 ),
               ),
             ),
-            const SizedBox(height: 26),
+            SizedBox(height: 26),
             Center(
               child: Countdown(
-              seconds: 60,
-              interval: const Duration(milliseconds: 100),
+                seconds: 60,
+                interval: const Duration(milliseconds: 100),
                 onFinished: () {
-                  print('Timer is done!');
-                  },
-                  build: (BuildContext context, double time) {
-                  // Create a Text widget with the desired style
+                  // Handle countdown finish
+                },
+                build: (BuildContext context, double time) {
                   return Text(
-                  time.toString(),
-                  style: const TextStyle(color: Colors.black, fontSize: 20.67,
-                  fontWeight: FontWeight.normal),
-                      );
-              },
+                    time.toString(),
+                    style: const TextStyle(
+                      color: Colors.black,
+                      fontSize: 20.67,
+                      fontWeight: FontWeight.normal,
+                    ),
+                  );
+                },
               ),
             ),
-            const SizedBox(height: 36),
+            SizedBox(height: 36),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text('Didn’t receive the code ?',
-                style: TextStyle(
-                  fontWeight: FontWeight.normal,
-                  fontSize: 16,
-                  color: Color(0xFFABABAB),
-                ),),
-                TextButton(onPressed: (){}, child: const Text('Resend',
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.normal,
-                  color: Color(0xFFF8B23F),
-                ),))
+                Text(
+                  'Didn’t receive the code ?',
+                  style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    fontSize: 16,
+                    color: Color(0xFFABABAB),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    // Handle resend code
+                  },
+                  child: Text(
+                    'Resend',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.normal,
+                      color: Colors.blue,
+                    ),
+                  ),
+                ),
               ],
-            )
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // Handle login
+              },
+              child: Text(
+                'Login',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.normal,
+                ),
+              ),
+            ),
           ],
         ),
       ),

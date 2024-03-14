@@ -23,7 +23,7 @@ class _loginState extends State<signup> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const Padding(
+             Padding(
               padding:  EdgeInsets.only(top: 80,left: 30),
               child: Row(
                 children: [
@@ -54,6 +54,7 @@ class _loginState extends State<signup> {
                 keyboardType: TextInputType.text,
                 style: TextStyle(color: Colors.black),
                 decoration: InputDecoration(
+                  suffixIcon: Icon(Icons.person),
                   hintText: 'Email',
                   hintStyle: TextStyle(color: Color(0xFFABABAB),
                       fontSize: 15),

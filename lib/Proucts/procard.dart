@@ -15,7 +15,7 @@ class _ProductCardState extends State<ProductCard> {
       width: MediaQuery.of(context).size.width/2,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(9),
-        color: Colors.grey.withOpacity((0.1))
+        color: Colors.black.withOpacity((0.1))
       ),
       child: Column(
         children: [
@@ -31,7 +31,7 @@ class _ProductCardState extends State<ProductCard> {
           SizedBox(
             height: 130,
             width: 130,
-            child: Image.asset(widget.product.image),
+           child:  Image.network(widget.product.image),
           )
         ],
       ),

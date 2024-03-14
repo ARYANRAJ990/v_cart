@@ -123,14 +123,6 @@ class _FeedState extends State<Feed> {
           SizedBox(
             height: 10,
           ),
-          Container(
-            height: 37,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: cat.length,
-              itemBuilder: (BuildContext context, int count)=>buildBody(context, count),
-            ),
-          ),
           SizedBox(height: 12),
           Padding(
             padding:  EdgeInsets.only(left: 15.0),
@@ -163,37 +155,57 @@ class _FeedState extends State<Feed> {
               ),
             ),
           ),
-         Container(
-           width: MediaQuery.of(context).size.width,
-           height: MediaQuery.of(context).size.height,
-           decoration: BoxDecoration(
-               borderRadius: BorderRadius.circular(9),
-               color: Colors.grey.withOpacity((0.1))
-           ),
-           child: GridView.builder(gridDelegate:  const SliverGridDelegateWithFixedCrossAxisCount(
-               crossAxisCount: 2,
-               childAspectRatio: (100/140),
-             crossAxisSpacing: 12,
-             mainAxisSpacing: 12,
-           ),
-               scrollDirection: Axis.vertical,
-               itemCount: myProduct().noodles.length,
-             itemBuilder: (context, index) {
-             return Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: Colors.blue.shade50,
-                //image: DecorationImage(
-                //  image: AssetImage("$myProduct")
-               // )
+      // Container(
+      //    width: MediaQuery.of(context).size.width,
+      //    height: MediaQuery.of(context).size.height,
+      //    child: SingleChildScrollView(
+      //      child: GridView.builder(
+      //        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+      //          crossAxisCount: 2,
+      //          childAspectRatio: (100 / 140),
+      //          crossAxisSpacing: 12,
+      //          mainAxisSpacing: 12,
+      //        ),
+      //        scrollDirection: Axis.vertical,
+      //        itemCount: myProduct().noodles.length,
+      //        shrinkWrap: true, // Ensure GridView takes only the space it needs
+      //        physics: NeverScrollableScrollPhysics(), // Disable GridView's scroll behavior
+      //        itemBuilder: (context, index) {
+      //          return Container(
+      //            decoration: BoxDecoration(
+      //              borderRadius: BorderRadius.circular(7),
+      //              color: Colors.blue,
+      //              //image: DecorationImage(
+      //              //  image: AssetImage("$myProduct")
+      //              // )
+      //            ),
+      //          );
+      //        },
+      //      ),
+      //    ),
+      //  )
+        Container(
+          height: MediaQuery.of(context).size.height, // Add a fixed height constraint
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: GridView.builder(
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                childAspectRatio: 100 / 140,
+                crossAxisSpacing: 12,
+                mainAxisSpacing: 12,
               ),
-             );
-
-             },
-           ),
-         )
-        ],
+              itemCount: myProduct().noodles.length,
+              itemBuilder: (context, index) {
+                return ProductCard(product: myProduct().noodles[index]);
+              },
             ),
+          ),
+        ),
+
+  ]),
       ),
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.white,

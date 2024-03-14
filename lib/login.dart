@@ -151,7 +151,7 @@ class _loginState extends State<login> {
                     borderRadius: BorderRadius.circular(14), // button's shape
                   ),
                 ),
-                child: const Text(
+                child:  Text(
                   'Login',
                   style: TextStyle(
                     color: Colors.white,
