@@ -20,7 +20,8 @@ class _ProductCardState extends State<ProductCard> {
       child: Column(
         children: [
           Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
+           // mainAxisAlignment: MainAxisAlignment.end,
+            //crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Icon(
                 Icons.currency_rupee,

@@ -212,7 +212,7 @@ class _FeedState extends State<Feed> {
         color: Color(0xFFF7F7F7),
         buttonBackgroundColor: Color(0xFFF8B23F),
         index: Index,
-        animationDuration: Durations.medium1,
+        animationDuration: Duration(milliseconds: 250),
         onTap: (Index){
           setState(() {
             button1 = Color(0xFFFF9F00);
