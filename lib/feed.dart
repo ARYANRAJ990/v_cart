@@ -134,7 +134,8 @@ class _FeedState extends State<Feed> {
                 return Container(
                   margin: EdgeInsets.symmetric(horizontal: 10),
                   width: 90,
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: Color(0xFFF8B23F)),
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: Color(
+                      0xFFFFE680)),
                 );
               },
             ),
@@ -142,7 +143,6 @@ class _FeedState extends State<Feed> {
           SizedBox(
             height: 15,
           ),
-
           Padding(
             padding:  EdgeInsets.only(left: 15.0),
             child: Container(
