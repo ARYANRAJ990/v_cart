@@ -25,7 +25,7 @@ class DetailsScreen extends StatelessWidget {
                       color: Color(0xFFFFC93F),
                     ),
                 borderRadius: BorderRadius.all(Radius.circular(8))),
-                child: Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ1IqBVb0-DoiV0UfeGIvD_s599DMZX93FaA&usqp=CAU",
+                child: Image.network(product.image,
                 fit: BoxFit.contain,),
               ),
             ],
@@ -34,7 +34,7 @@ class DetailsScreen extends StatelessWidget {
           Container(
             width: double.infinity,
             height: 400,
-            color: Colors.grey,
+            color: Colors.white,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -94,18 +94,24 @@ class DetailsScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Padding(
-                      padding:  EdgeInsets.only(left: 50.0),
-                      child: Text('Status :-  ',style: TextStyle(
+                      padding: EdgeInsets.only(left: 50.0),
+                      child: Text(
+                        'Status :-  ',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.normal,
+                          color: Color(0xFFFFC93F),
+                        ),
+                      ),
+                    ),
+                    Text(
+                      product.status,
+                      style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.normal,
-                        color: Color(0xFFFFC93F),
-                      ),),
-                    ),
-                    Text(product.status,style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.normal,
-                      color: Colors.black
-                    ),)
+                        color: Colors.black,
+                      ),
+                    )
                   ],
                 ),
                 SizedBox(height: 10),
@@ -113,24 +119,52 @@ class DetailsScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Padding(
-                      padding:  EdgeInsets.only(left: 50.0),
-                      child: Text('Price :-  ',style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.normal,
-                        color: Color(0xFFFFC93F),
-                      ),),
+                      padding: EdgeInsets.only(left: 50.0),
+                      child: Text(
+                        'Price :-  ',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.normal,
+                          color: Color(0xFFFFC93F),
+                        ),
+                      ),
                     ),
-                    Text("\₹${product.price}",
+                    Text(
+                      "\₹${product.price}",
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.normal,
-                        color: Colors.black
-                    ),)
+                        color: Colors.black,
+                      ),
+                    )
                   ],
                 ),
+                SizedBox(height: 60),
+                Center(
+                  child: SizedBox(
+                    height: 65,
+                    width: 300,
+                    child: ElevatedButton(onPressed: (){},
+                        style: ElevatedButton.styleFrom(
+                          foregroundColor: Colors.black, backgroundColor: const Color(0xFF343434), // text color
+                          elevation: 2,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(14), // button's shape
+                          ),
+                        ),
+                        child: Text( 'Contact Seller',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 19.33,
+                        color: Colors.white
+                      ),
+                    )),
+                  ),
+                )
               ],
             ),
-          )
+
+          ),
         ],
       ),
     );
