@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 import 'package:v_cart/Proucts/MyProducts.dart';
+import 'package:v_cart/Proucts/details.dart';
 import 'package:v_cart/Proucts/procard.dart';
 import 'package:v_cart/Proucts/product.dart';
 import 'package:v_cart/drwaerNavbar.dart';
@@ -123,7 +124,25 @@ class _FeedState extends State<Feed> {
           SizedBox(
             height: 10,
           ),
-          SizedBox(height: 12),
+          Container(
+            height: 35,
+            width: MediaQuery.of(context).size.width,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: 7,
+              itemBuilder: (context, count){
+                return Container(
+                  margin: EdgeInsets.symmetric(horizontal: 10),
+                  width: 90,
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: Color(0xFFF8B23F)),
+                );
+              },
+            ),
+          ),
+          SizedBox(
+            height: 15,
+          ),
+
           Padding(
             padding:  EdgeInsets.only(left: 15.0),
             child: Container(
@@ -155,6 +174,7 @@ class _FeedState extends State<Feed> {
               ),
             ),
           ),
+      SizedBox(height: 10),
       // Container(
       //    width: MediaQuery.of(context).size.width,
       //    height: MediaQuery.of(context).size.height,
@@ -199,12 +219,16 @@ class _FeedState extends State<Feed> {
               ),
               itemCount: myProduct().noodles.length,
               itemBuilder: (context, index) {
-                return ProductCard(product: myProduct().noodles[index]);
+                 ProductCard(product: myProduct().noodles[index]);
+                 return GestureDetector(
+                   onTap:() =>  Navigator.push(context, MaterialPageRoute(builder: (context) => DetailsScreen(product: myProduct().noodles[index])),
+                 ),
+                 child: ProductCard(product: myProduct().noodles[index]),
+                 );
               },
             ),
           ),
         ),
-
   ]),
       ),
       bottomNavigationBar: CurvedNavigationBar(
