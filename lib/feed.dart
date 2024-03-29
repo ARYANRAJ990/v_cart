@@ -8,6 +8,7 @@ import 'package:v_cart/Proucts/details.dart';
 import 'package:v_cart/Proucts/procard.dart';
 import 'package:v_cart/Proucts/product.dart';
 import 'package:v_cart/drwaerNavbar.dart';
+import 'package:v_cart/login.dart';
 class Feed extends StatefulWidget {
 
 
@@ -237,33 +238,46 @@ class _FeedState extends State<Feed> {
         buttonBackgroundColor: Color(0xFFF8B23F),
         index: Index,
         animationDuration: Duration(milliseconds: 250),
-        onTap: (Index){
+        onTap: (index) {
           setState(() {
+            Index = index;
             button1 = Color(0xFFFF9F00);
             button2 = Color(0xFFFF9F00);
             button3 = Color(0xFFFF9F00);
-            if(Index == 0){
+            if (Index == 0) {
               button1 = Colors.white;
-            }
-            else if(Index == 2){
+            } else if (Index == 2) {
               button3 = Colors.white;
-            }
-            else{
+            } else {
               button2 = Colors.white;
+            }
+            switch (Index) {
+              case 0:
+              // Navigate to home page
+                break;
+              case 1:
+              // Navigate to login page
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => login()),
+                );
+                break;
+              case 2:
+              // Navigate to chat page
+                break;
             }
           });
         },
-
         items: [
           CurvedNavigationBarItem(
             child: Icon(Icons.home_rounded,
-            size: 32,
-            color: button1),
+                size: 32,
+                color: button1),
           ),
           CurvedNavigationBarItem(
             child: Icon(Icons.add,
                 size: 38,
-            color: button2),
+                color: button2),
           ),
           CurvedNavigationBarItem(
             child: Icon(Icons.chat_rounded,
