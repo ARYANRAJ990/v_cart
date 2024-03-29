@@ -7,6 +7,7 @@ import 'package:v_cart/Proucts/MyProducts.dart';
 import 'package:v_cart/Proucts/details.dart';
 import 'package:v_cart/Proucts/procard.dart';
 import 'package:v_cart/Proucts/product.dart';
+import 'package:v_cart/chats/chatList.dart';
 import 'package:v_cart/drwaerNavbar.dart';
 import 'package:v_cart/login.dart';
 class Feed extends StatefulWidget {
@@ -263,7 +264,8 @@ class _FeedState extends State<Feed> {
                 );
                 break;
               case 2:
-              // Navigate to chat page
+              Navigator.push(context, MaterialPageRoute(builder: (context) => chatlist()),
+              );
                 break;
             }
           });
