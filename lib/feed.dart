@@ -8,7 +8,7 @@ import 'package:v_cart/Proucts/details.dart';
 import 'package:v_cart/Proucts/procard.dart';
 import 'package:v_cart/Proucts/product.dart';
 import 'package:v_cart/chats/chatList.dart';
-import 'package:v_cart/drwaerNavbar.dart';
+import 'package:v_cart/Navbar/drwaerNavbar.dart';
 import 'package:v_cart/login.dart';
 class Feed extends StatefulWidget {
 
@@ -136,8 +136,8 @@ class _FeedState extends State<Feed> {
                 return Container(
                   margin: EdgeInsets.symmetric(horizontal: 10),
                   width: 90,
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: Color(
-                      0xFFFFE680)),
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(8),
+                      color: Color(0xFFFFE680)),
                 );
               },
             ),

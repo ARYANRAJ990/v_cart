@@ -13,8 +13,18 @@ class NavBar extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           UserAccountsDrawerHeader(
-            accountName: const Text('Oflutter.com'),
-            accountEmail: const Text('example@gmail.com'),
+            decoration: BoxDecoration(
+              color: Color(0xFFFFE680),
+            ),
+            accountName: const Text('Aryan',style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+            fontSize: 14),),
+            accountEmail: const Text('example@gmail.com',style: TextStyle(
+              color: Colors.black,
+              fontSize: 14,
+              fontWeight: FontWeight.bold
+            ),),
             currentAccountPicture: CircleAvatar(
               child: ClipOval(
                 child: Image.asset('images/cart.png',
