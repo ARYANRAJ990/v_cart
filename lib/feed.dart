@@ -83,7 +83,7 @@ class _FeedState extends State<Feed> {
             ),
             child: IconButton(
               onPressed: () {},
-              icon: Icon(Icons.notifications_none_rounded,size: 30,),
+              icon: Icon(Icons.notification_add,size: 30,),
               color: Color(0xFFF8B23F),
             ),
           ),

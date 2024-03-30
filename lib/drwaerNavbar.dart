@@ -26,9 +26,12 @@ class NavBar extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: const Icon(Icons.person),
-            title: const Text('Account'),
-            // tileColor: isSelected ? Colors.grey : null,
+            leading: const Icon(Icons.person,color: Colors.black,),
+            title: const Text('Account',style: TextStyle(
+                color: Colors.black,
+            fontWeight: FontWeight.bold,
+            fontSize: 18),),
+            //tileColor: isSelected ? Colors.grey : null,
             onTap: () {
               //Navigator.push(
               //  context,
@@ -36,15 +39,13 @@ class NavBar extends StatelessWidget {
               //);
             },
           ),
-          ListTile(
-            leading:  const Icon(Icons.assignment),
-            title:  const Text('Assignment'),
-            onTap: () {},
-          ),
           const Divider(),
           ListTile(
-            leading: const Icon(Icons.settings),
-            title: const Text('Settings'),
+            leading: const Icon(Icons.settings,color: Colors.black,),
+            title: const Text('Settings',style: TextStyle(
+                color: Colors.black,
+            fontSize: 18,
+            fontWeight: FontWeight.bold),),
             onTap: () {
               //Navigator.push(
               //  context,
@@ -52,15 +53,13 @@ class NavBar extends StatelessWidget {
               //);
             },
           ),
-          ListTile(
-            leading: const Icon(Icons.contact_support),
-            title: const Text('Contact Us'),
-            onTap: () {},
-          ),
           Divider(),
           ListTile(
-            title: const Text('Logout'),
-            leading: const Icon(Icons.logout),
+            title: const Text('Logout',style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+            fontSize: 18),),
+            leading: const Icon(Icons.logout,color: Colors.black,),
             onTap: () {
               //Navigator.push(
               //  context,
