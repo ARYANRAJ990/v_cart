@@ -13,6 +13,7 @@ class _chatlistState extends State<chatlist> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        foregroundColor: Colors.black,
         backgroundColor: Colors.white,
         title: Text(
           'Chat History',
@@ -42,7 +43,7 @@ class _chatlistState extends State<chatlist> {
   Widget buildChatItem(BuildContext context, int index) {
     // Example of a simple chat item
     return ListTile(
-      back
+
       leading: CircleAvatar(
         backgroundColor:Color(0xFFF8B23F) ,
         child: Text('A'),
@@ -56,7 +57,7 @@ class _chatlistState extends State<chatlist> {
       subtitle: Text('how are you',style:
         TextStyle(
                fontWeight: FontWeight.normal,
-          fontSize: 18,
+          fontSize: 16,
           color: Colors.black ,
         ),), // Example sender, replace it with actual sender
     );
