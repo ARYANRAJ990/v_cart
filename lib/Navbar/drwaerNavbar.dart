@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:v_cart/Navbar/Account.dart';
 
 class NavBar extends StatelessWidget {
   late String isSelected;
@@ -37,16 +38,16 @@ class NavBar extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.person,color: Colors.black,),
-            title: const Text('Account',style: TextStyle(
+            title: const Text(' My Account',style: TextStyle(
                 color: Colors.black,
             fontWeight: FontWeight.bold,
-            fontSize: 18),),
+            fontSize: 16),),
             //tileColor: isSelected ? Colors.grey : null,
             onTap: () {
-              //Navigator.push(
-              //  context,
-              //  MaterialPageRoute(builder: (context) =>  const Account()), // Assuming Feed is the widget you want to navigate to
-              //);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>   Myaccount()), // Assuming Feed is the widget you want to navigate to
+              );
             },
           ),
           const Divider(),
@@ -54,7 +55,7 @@ class NavBar extends StatelessWidget {
             leading: const Icon(Icons.settings,color: Colors.black,),
             title: const Text('Settings',style: TextStyle(
                 color: Colors.black,
-            fontSize: 18,
+            fontSize: 16,
             fontWeight: FontWeight.bold),),
             onTap: () {
               //Navigator.push(
@@ -68,8 +69,8 @@ class NavBar extends StatelessWidget {
             title: const Text('Logout',style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
-            fontSize: 18),),
-            leading: const Icon(Icons.logout,color: Colors.black,),
+            fontSize: 16),),
+            leading:  Icon(Icons.logout,color: Colors.black,),
             onTap: () {
               //Navigator.push(
               //  context,
