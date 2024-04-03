@@ -13,7 +13,7 @@ class _MyaccountState extends State<Myaccount> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         foregroundColor: Colors.black,
-        backgroundColor: Colors.white70,
+        backgroundColor: Color(0xFFFFE680),
       title: Text('Basic Information',
       style: TextStyle(
         fontSize: 24,
@@ -93,12 +93,12 @@ class _MyaccountState extends State<Myaccount> {
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 19,
-                backgroundColor: Colors.yellowAccent,
+                backgroundColor: Color(0xFFFFE680),
                 fontWeight: FontWeight.bold
               ),),
             ),
             Divider(
-             // height: 69,
+             height: 1,
               thickness: 1, // Adjust the thickness of the divider as needed
               color: Colors.black, // Set the color of the divider
               indent: 15, // Add an indentation to match the text padding

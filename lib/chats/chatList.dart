@@ -59,7 +59,8 @@ class _chatlistState extends State<chatlist> {
                fontWeight: FontWeight.normal,
           fontSize: 16,
           color: Colors.black ,
-        ),), // Example sender, replace it with actual sender
+        ),),
+      // Example sender, replace it with actual sender
     );
   }
 }

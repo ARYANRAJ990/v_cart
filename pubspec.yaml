@@ -42,6 +42,7 @@ dependencies:
   show_hide_password: ^0.0.2
   curved_labeled_navigation_bar: ^2.0.2
   dropdown_button2: ^2.3.9
+  flutter_chat_ui: ^1.6.12
 
 dev_dependencies:
   flutter_test:

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:v_cart/Navbar/Account.dart';
+import 'package:v_cart/Navbar/Setting.dart';
 
 class NavBar extends StatelessWidget {
   late String isSelected;
@@ -58,10 +59,10 @@ class NavBar extends StatelessWidget {
             fontSize: 16,
             fontWeight: FontWeight.bold),),
             onTap: () {
-              //Navigator.push(
-              //  context,
-              //  MaterialPageRoute(builder: (context) =>   Settings()), // Assuming Feed is the widget you want to navigate to
-              //);
+             Navigator.push(
+               context,
+               MaterialPageRoute(builder: (context) =>   setting()), // Assuming Feed is the widget you want to navigate to
+             );
             },
           ),
           Divider(),
