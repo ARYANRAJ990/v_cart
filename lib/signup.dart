@@ -42,11 +42,36 @@ class _loginState extends State<signup> {
                 ],
               ),
             ),
-            const SizedBox(height: 35),
+            const SizedBox(height: 18),
             SizedBox(
-              height: 280,
+              height: 220,
               child: Image.asset('images/login.png'),
             ),
+            const SizedBox(
+              height: 55,
+              width: 295,
+              child: TextField(
+                keyboardType: TextInputType.text,
+                style: TextStyle(color: Colors.black),
+                decoration: InputDecoration(
+                  suffixIcon: Icon(Icons.person),
+                  hintText: 'User Name',
+                  hintStyle: TextStyle(color: Color(0xFFABABAB),
+                      fontSize: 15),
+                  labelText: 'User Name',
+                  labelStyle: TextStyle(color: Color(0xFFABABAB)),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(14),
+                    ),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Color(0xFFABABAB)),
+                  ),
+                ),
+
+              ),
+            ),
+            SizedBox(height: 17),
             const SizedBox(
               height: 55,
               width: 295,
