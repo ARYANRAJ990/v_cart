@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "948935646526",
-    "project_id": "vcart-a665b",
-    "storage_bucket": "vcart-a665b.appspot.com"
+    "project_number": "389260097429",
+    "project_id": "vcartt89",
+    "storage_bucket": "vcartt89.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:948935646526:android:eb73e1d2789a2508fe206f",
+        "mobilesdk_app_id": "1:389260097429:android:1ea8b5806293510a9be89c",
         "android_client_info": {
           "package_name": "com.vcart.v_cart"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyA6DHNhTsbTYz2g3ckGRa3caCi0Hmlv9f4"
+          "current_key": "AIzaSyDuxFY0FpeLnRyEBLlZvYAH8CgifqUahyA"
         }
       ],
       "services": {
