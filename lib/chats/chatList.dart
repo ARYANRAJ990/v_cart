@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:v_cart/Flaschat/angelachats.dart';
 import 'package:v_cart/chats/chats.dart';
 
 class chatlist extends StatefulWidget {
@@ -62,7 +63,7 @@ class _chatlistState extends State<chatlist> {
         ),),
       onTap: (){
         Navigator.push(context,
-            MaterialPageRoute(builder: (context) => ChatScreen()),);
+            MaterialPageRoute(builder: (context) => ChatsScreen()),);
       },
       // Example sender, replace it with actual sender
     );

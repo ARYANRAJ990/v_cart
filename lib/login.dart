@@ -4,6 +4,7 @@ import 'package:v_cart/feed.dart';
 import 'package:v_cart/forget.dart';
 import 'package:show_hide_password/show_hide_password.dart';
 import 'package:v_cart/signup.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class login extends StatefulWidget {
   const login({super.key});
@@ -25,6 +26,7 @@ class _loginState extends State<login> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Padding(
+
               padding: EdgeInsets.only(top: 80, left: 30),
               child: Row(
                 children: [
