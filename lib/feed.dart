@@ -10,6 +10,7 @@ import 'package:v_cart/Proucts/product.dart';
 import 'package:v_cart/chats/chatList.dart';
 import 'package:v_cart/Navbar/drwaerNavbar.dart';
 import 'package:v_cart/login.dart';
+import 'package:v_cart/uploding_button/product_upload.dart';
 class Feed extends StatefulWidget {
 
 
@@ -260,7 +261,7 @@ class _FeedState extends State<Feed> {
               // Navigate to login page
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => login()),
+                  MaterialPageRoute(builder: (context) => product_upload()),
                 );
                 break;
               case 2:
@@ -277,11 +278,13 @@ class _FeedState extends State<Feed> {
                 color: button1),
           ),
           CurvedNavigationBarItem(
-            child: Icon(Icons.add,
-                size: 38,
-                color: button2),
+            child: Icon(
+              Icons.add,
+              size: 38,
+              color: button2,
+            ),
           ),
-          CurvedNavigationBarItem(
+      CurvedNavigationBarItem(
             child: Icon(Icons.chat_rounded,
                 size: 30,color: button3),
           ),

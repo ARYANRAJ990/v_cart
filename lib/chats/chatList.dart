@@ -16,7 +16,7 @@ class _chatlistState extends State<chatlist> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         foregroundColor: Colors.black,
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFFFFE680),
         title: Text(
           'Chat History',
           style: TextStyle(
