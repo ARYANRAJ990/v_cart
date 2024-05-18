@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:v_cart/catagories/electronics.dart';
 import 'package:v_cart/login.dart';
-import 'package:v_cart/uploding_button/Product_Category.dart';
+import 'package:v_cart/catagories/Food.dart';
 
 class product_upload extends StatefulWidget {
 
@@ -70,7 +71,8 @@ class _product_uploadState extends State<product_upload> {
                 SizedBox(width: 50),
                 GestureDetector(
                   onTap: () {
-                    // Handle onTap for Electronics
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Electronics()));
                   },
                   child: Center(
                     child: Card(
