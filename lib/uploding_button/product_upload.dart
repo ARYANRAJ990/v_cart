@@ -45,7 +45,7 @@ class _product_uploadState extends State<product_upload> {
                         height: 100,
                         width: 100,
                         decoration: BoxDecoration(
-                          color: Colors.grey[400],
+                          color: Colors.grey[700],
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Column(
@@ -79,7 +79,7 @@ class _product_uploadState extends State<product_upload> {
                         height: 100,
                         width: 100,
                         decoration: BoxDecoration(
-                          color: Colors.grey[400],
+                          color: Colors.grey[700],
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Column(
@@ -120,7 +120,7 @@ class _product_uploadState extends State<product_upload> {
                       height: 100,
                       width: 100,
                       decoration: BoxDecoration(
-                        color: Colors.grey[400],
+                        color: Colors.grey[700],
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(
@@ -154,7 +154,7 @@ class _product_uploadState extends State<product_upload> {
                       height: 100,
                       width: 100,
                       decoration: BoxDecoration(
-                        color: Colors.grey[400],
+                        color: Colors.grey[700],
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(
@@ -194,7 +194,7 @@ class _product_uploadState extends State<product_upload> {
                       height: 100,
                       width: 100,
                       decoration: BoxDecoration(
-                        color: Colors.grey[400],
+                        color: Colors.grey[700],
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(
@@ -228,7 +228,7 @@ class _product_uploadState extends State<product_upload> {
                       height: 100,
                       width: 100,
                       decoration: BoxDecoration(
-                        color: Colors.grey[400],
+                        color: Colors.grey[700],
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(

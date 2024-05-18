@@ -24,7 +24,9 @@ class _Product_CatState extends State<Product_Cat> {
       body: Column(
         children: [
           ListTile(
-            leading: Icon(Icons.cookie_rounded,color: Colors.black,),
+            leading:  Text('🍪',style: TextStyle(
+              fontSize: 25,
+            ),),
             titleAlignment: ListTileTitleAlignment.center,
             title: const Text(' Biscuits ',style: TextStyle(
                 color: Colors.black,
@@ -42,7 +44,9 @@ class _Product_CatState extends State<Product_Cat> {
             color: Colors.grey,
           ),
           ListTile(
-            leading: Icon(Icons.ramen_dining_outlined,color: Colors.black,),
+            leading:Text('🍜',style: TextStyle(
+              fontSize: 25,
+            ),),
             titleAlignment: ListTileTitleAlignment.center,
             title: const Text(' Noodles ',style: TextStyle(
                 color: Colors.black,
@@ -60,7 +64,9 @@ class _Product_CatState extends State<Product_Cat> {
             color: Colors.grey,
           ),
           ListTile(
-            leading: Icon(Icons.cookie_rounded,color: Colors.black,),
+            leading: Text('🍟',style: TextStyle(
+              fontSize: 25,
+            ),),
             titleAlignment: ListTileTitleAlignment.center,
             title: const Text(' Chips ',style: TextStyle(
                 color: Colors.black,
@@ -78,6 +84,9 @@ class _Product_CatState extends State<Product_Cat> {
             color: Colors.grey,
           ),
           ListTile(
+            leading: Text('🥜',style: TextStyle(
+              fontSize: 25,
+            ),),
             titleAlignment: ListTileTitleAlignment.center,
             title: const Text(' Namkeens ',style: TextStyle(
                 color: Colors.black,
@@ -95,8 +104,9 @@ class _Product_CatState extends State<Product_Cat> {
             color: Colors.grey,
           ),
           ListTile(
-            leading: Icon(Icons.local_drink_outlined,color: Colors.black,),
-            titleAlignment: ListTileTitleAlignment.center,
+            leading: Text('🥤',style: TextStyle(
+              fontSize: 25,
+            ),),            titleAlignment: ListTileTitleAlignment.center,
             title: const Text(' Drinks ',style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.normal,
@@ -113,6 +123,9 @@ class _Product_CatState extends State<Product_Cat> {
             color: Colors.grey,
           ),
           ListTile(
+            leading: Text('🍫',style: TextStyle(
+              fontSize: 25,
+            ),),
             titleAlignment: ListTileTitleAlignment.center,
             title: const Text(' Choclates ',style: TextStyle(
                 color: Colors.black,
@@ -130,6 +143,10 @@ class _Product_CatState extends State<Product_Cat> {
             color: Colors.grey,
           ),
           ListTile(
+            leading: Text('🍴',style: TextStyle(
+              color: Colors.black,
+              fontSize: 25,
+            ),),
             titleAlignment: ListTileTitleAlignment.center,
             title: const Text(' Others ',style: TextStyle(
                 color: Colors.black,
