@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:v_cart/imagepicker/imagePicker.dart';
 
 class setPrice extends StatefulWidget {
   @override
@@ -170,8 +172,8 @@ class _CycleState extends State<setPrice> {
               width: 300,
               child: ElevatedButton(
                 onPressed: () {
-              //  Navigator.push(context,
-              //      MaterialPageRoute(builder: (context) => Feed()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ImagePickerWidget()));
                 },
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.black,
