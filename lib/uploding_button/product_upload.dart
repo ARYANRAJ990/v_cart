@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:v_cart/catagories/Cloth.dart';
-import 'package:v_cart/catagories/Cycle.dart';
+import 'package:v_cart/catagories/setprice.dart';
 import 'package:v_cart/catagories/Stationary.dart';
 import 'package:v_cart/catagories/electronics.dart';
 import 'package:v_cart/login.dart';
@@ -194,7 +194,7 @@ class _product_uploadState extends State<product_upload> {
                 GestureDetector(
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => cycle()));
+                        MaterialPageRoute(builder: (context) => setPrice()));
                   },
                   child: Center(
                     child: Card(
