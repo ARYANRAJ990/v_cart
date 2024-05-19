@@ -57,21 +57,19 @@ class _FeedState extends State<Feed> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: Padding(
-          padding:  EdgeInsets.only(left: 18.0),
+          padding: EdgeInsets.only(left: 5.0),
           child: Container(
-            width: 70,
-            height: 70,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-            ),
-            child: IconButton(
-              icon: Image.asset('images/man.png',
-              fit: BoxFit.cover,
-              width: 70,
-              height: 70),
-              onPressed: () {
-                 Navigator.push(context, MaterialPageRoute(builder: (context) => NavBar()));
-              },
+            width: 50,
+            height: 50,
+            child: CircleAvatar(
+              backgroundImage: AssetImage('images/man.png'),
+              backgroundColor: Colors.black,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => NavBar()));
+                },
+              ),
             ),
           ),
         ),
@@ -84,7 +82,10 @@ class _FeedState extends State<Feed> {
             ),
             child: IconButton(
               onPressed: () {},
-              icon: Icon(Icons.notification_add,size: 30,),
+              icon: Icon(
+                Icons.notification_add,
+                size: 30,
+              ),
               color: Color(0xFFF8B23F),
             ),
           ),
