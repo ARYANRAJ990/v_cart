@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:v_cart/catagories/setprice.dart';
 class Product_Cat extends StatefulWidget {
   const Product_Cat({super.key});
 
@@ -35,10 +36,10 @@ class _Product_CatState extends State<Product_Cat> {
                   fontSize: 18),),
               //tileColor: isSelected ? Colors.grey : null,
               onTap: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) =>   Myaccount()), // Assuming Feed is the widget you want to navigate to
-              // );
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>   setPrice()), // Assuming Feed is the widget you want to navigate to
+              );
               },
             ),
             const Divider(
@@ -55,10 +56,10 @@ class _Product_CatState extends State<Product_Cat> {
                   fontSize: 18),),
               //tileColor: isSelected ? Colors.grey : null,
               onTap: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) =>   Myaccount()), // Assuming Feed is the widget you want to navigate to
-                // );
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) =>   setPrice()), // Assuming Feed is the widget you want to navigate to
+                 );
               },
             ),
             const Divider(
@@ -75,10 +76,10 @@ class _Product_CatState extends State<Product_Cat> {
                   fontSize: 18),),
               //tileColor: isSelected ? Colors.grey : null,
               onTap: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) =>   Myaccount()), // Assuming Feed is the widget you want to navigate to
-                // );
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) =>   setPrice()), // Assuming Feed is the widget you want to navigate to
+                 );
               },
             ),
             const Divider(
@@ -95,10 +96,10 @@ class _Product_CatState extends State<Product_Cat> {
                   fontSize: 18),),
               //tileColor: isSelected ? Colors.grey : null,
               onTap: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) =>   Myaccount()), // Assuming Feed is the widget you want to navigate to
-                // );
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) =>   setPrice()), // Assuming Feed is the widget you want to navigate to
+                 );
               },
             ),
             const Divider(
@@ -114,10 +115,10 @@ class _Product_CatState extends State<Product_Cat> {
                   fontSize: 18),),
               //tileColor: isSelected ? Colors.grey : null,
               onTap: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) =>   Myaccount()), // Assuming Feed is the widget you want to navigate to
-                // );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>   setPrice()), // Assuming Feed is the widget you want to navigate to
+                );
               },
             ),
             const Divider(
@@ -134,10 +135,10 @@ class _Product_CatState extends State<Product_Cat> {
                   fontSize: 18),),
               //tileColor: isSelected ? Colors.grey : null,
               onTap: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) =>   Myaccount()), // Assuming Feed is the widget you want to navigate to
-                // );
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) =>   setPrice()), // Assuming Feed is the widget you want to navigate to
+                 );
               },
             ),
             const Divider(
@@ -155,10 +156,10 @@ class _Product_CatState extends State<Product_Cat> {
                   fontSize: 18),),
               //tileColor: isSelected ? Colors.grey : null,
               onTap: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) =>   Myaccount()), // Assuming Feed is the widget you want to navigate to
-                // );
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) =>   setPrice()), // Assuming Feed is the widget you want to navigate to
+                 );
               },
             ),
             const Divider(

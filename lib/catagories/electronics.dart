@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:v_cart/catagories/setprice.dart';
 
 
 class Electronics extends StatefulWidget {
@@ -35,10 +36,10 @@ class _ElectronicsState extends State<Electronics> {
                   fontSize: 18),),
               //tileColor: isSelected ? Colors.grey : null,
               onTap: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) =>   Myaccount()), // Assuming Feed is the widget you want to navigate to
-                // );
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) =>   setPrice()), // Assuming Feed is the widget you want to navigate to
+                 );
               },
             ),
             const Divider(
@@ -53,10 +54,10 @@ class _ElectronicsState extends State<Electronics> {
                   fontSize: 18),),
               //tileColor: isSelected ? Colors.grey : null,
               onTap: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) =>   Myaccount()), // Assuming Feed is the widget you want to navigate to
-                // );
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) =>   setPrice()) // Assuming Feed is the widget you want to navigate to
+                 );
               },
             ),
             const Divider(
@@ -71,10 +72,10 @@ class _ElectronicsState extends State<Electronics> {
                   fontSize: 18),),
               //tileColor: isSelected ? Colors.grey : null,
               onTap: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) =>   Myaccount()), // Assuming Feed is the widget you want to navigate to
-                // );
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) =>   setPrice()), // Assuming Feed is the widget you want to navigate to
+                 );
               },
             ),
             const Divider(
@@ -89,10 +90,10 @@ class _ElectronicsState extends State<Electronics> {
                   fontSize: 18),),
               //tileColor: isSelected ? Colors.grey : null,
               onTap: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) =>   Myaccount()), // Assuming Feed is the widget you want to navigate to
-                // );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>   setPrice()), // Assuming Feed is the widget you want to navigate to
+                );
               },
             ),
             const Divider(
@@ -107,10 +108,10 @@ class _ElectronicsState extends State<Electronics> {
                   fontSize: 18),),
               //tileColor: isSelected ? Colors.grey : null,
               onTap: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) =>   Myaccount()), // Assuming Feed is the widget you want to navigate to
-                // );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  setPrice()), // Assuming Feed is the widget you want to navigate to
+                );
               },
             ),
             const Divider(
@@ -125,10 +126,10 @@ class _ElectronicsState extends State<Electronics> {
                   fontSize: 18),),
               //tileColor: isSelected ? Colors.grey : null,
               onTap: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) =>   Myaccount()), // Assuming Feed is the widget you want to navigate to
-                // );
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) =>   setPrice()), // Assuming Feed is the widget you want to navigate to
+                 );
               },
             ),
             const Divider(
@@ -143,10 +144,10 @@ class _ElectronicsState extends State<Electronics> {
                   fontSize: 18),),
               //tileColor: isSelected ? Colors.grey : null,
               onTap: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) =>   Myaccount()), // Assuming Feed is the widget you want to navigate to
-                // );
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) =>  setPrice()), // Assuming Feed is the widget you want to navigate to
+                 );
               },
             ),
             const Divider(
@@ -161,10 +162,10 @@ class _ElectronicsState extends State<Electronics> {
                   fontSize: 18),),
               //tileColor: isSelected ? Colors.grey : null,
               onTap: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) =>   Myaccount()), // Assuming Feed is the widget you want to navigate to
-                // );
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) =>   setPrice()), // Assuming Feed is the widget you want to navigate to
+                 );
               },
             ),
             const Divider(

@@ -228,7 +228,8 @@ class _product_uploadState extends State<product_upload> {
                 SizedBox(width: 50),
                 GestureDetector(
                   onTap: () {
-                    // Handle onTap for Others
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => setPrice()));
                   },
                   child: Center(
                     child: Card(
