@@ -5,7 +5,7 @@ class myProduct {
   List<Product> noodles = [
     Product(
       id: 1,
-      status: "Available",
+     // status: "Available",
       description: "heloo I am maggie you can eat me heheheheheheheheh",
       name: 'Maggie',
       price: 24.00,
@@ -15,7 +15,7 @@ class myProduct {
     ),
     Product(
       id: 1,
-      status: "Available",
+      //status: "Available",
       description: "heloo I am yipee you can eat me",
       name: 'Yipee',
       price: 18.00,
@@ -25,7 +25,7 @@ class myProduct {
     ),
     Product(
       id: 1,
-      status: "Available",
+     // status: "Available",
       description: "heloo I am maggie you can eat me",
       name: 'Maggie',
       price: 24.00,
@@ -35,7 +35,7 @@ class myProduct {
     ),
     Product(
       id: 1,
-      status: "Available",
+     // status: "Available",
       description: "heloo I am Top Ramen you can eat me",
       name: 'Top ramen',
       price: 20.00,
@@ -45,7 +45,7 @@ class myProduct {
     ),
     Product(
       id: 1,
-      status: "Sold",
+    //  status: "Sold",
       description: "heloo I am maggie you can eat me heheheheheheheheh",
       name: 'Maggie',
       price: 24.00,
@@ -56,7 +56,7 @@ class myProduct {
     Product(
       description: "heloo I am maggie you can eat me",
       id: 1,
-      status: "Available",
+     // status: "Available",
       name: 'Maggie',
       price: 24.00,
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ1IqBVb0-DoiV0UfeGIvD_s599DMZX93FaA&usqp=CAU",

@@ -2,7 +2,7 @@ import 'package:flutter/src/widgets/image.dart';
 
 class Product {
   late int id;
-  late String status;
+ // late String status;
   late String description;
   late String name;
   late String category;
@@ -12,7 +12,7 @@ class Product {
 
   Product({
     required this.id,
-    required this.status,
+  //  required this.status,
     required this.description,
     required this.name,
     required this.price,

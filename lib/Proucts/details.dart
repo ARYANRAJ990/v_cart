@@ -90,30 +90,30 @@ class DetailsScreen extends StatelessWidget {
                 SizedBox(
                   height: 10,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(left: 50.0),
-                      child: Text(
-                        'Status :-  ',
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.normal,
-                          color: Color(0xFFFFC93F),
-                        ),
-                      ),
-                    ),
-                    Text(
-                      product.status,
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.normal,
-                        color: Colors.black,
-                      ),
-                    )
-                  ],
-                ),
+             // Row(
+             //   mainAxisAlignment: MainAxisAlignment.start,
+             //   children: [
+             //     Padding(
+             //       padding: EdgeInsets.only(left: 50.0),
+             //       child: Text(
+             //         'Status :-  ',
+             //         style: TextStyle(
+             //           fontSize: 24,
+             //           fontWeight: FontWeight.normal,
+             //           color: Color(0xFFFFC93F),
+             //         ),
+             //       ),
+             //     ),
+             //     Text(
+             //       product.status,
+             //       style: TextStyle(
+             //         fontSize: 24,
+             //         fontWeight: FontWeight.normal,
+             //         color: Colors.black,
+             //       ),
+             //     )
+             //   ],
+             // ),
                 SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
